@@ -16,18 +16,18 @@ page_text = soup.get_text(separator="\n", strip=True)
 
 print(soup.title)
 
-# Split into non-empty lines and save to CSV
-lines = [ln.strip() for ln in page_text.split("\n") if ln.strip()]
-print(f"Extracted {len(lines)} text lines")
+#   # Split into non-empty lines and save to CSV
+# lines = [ln.strip() for ln in page_text.split("\n") if ln.strip()]
+# print(f"Extracted {len(lines)} text lines")
 
-csv_path = 'page_text.csv'
-with open(csv_path, 'w', encoding='utf-8', newline='') as csvfile:
-    writer = csv.writer(csvfile)
-    writer.writerow(['text'])
-    for ln in lines:
-        writer.writerow([ln])
+# csv_path = 'page_text.csv'
+# with open(csv_path, 'w', encoding='utf-8', newline='') as csvfile:
+#     writer = csv.writer(csvfile)
+#     writer.writerow(['text'])
+#     for ln in lines:
+#         writer.writerow([ln])
 
-print(f"Saved text lines to {csv_path}")
+# print(f"Saved text lines to {csv_path}")
 
 
 
